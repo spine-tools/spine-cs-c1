@@ -1,0 +1,80 @@
+{
+    "project": {
+        "version": 6,
+        "name": "",
+        "description": "",
+        "specifications": {},
+        "connections": [
+            {
+                "from": [
+                    "Input",
+                    "right"
+                ],
+                "to": [
+                    "Run SpineOpt 1",
+                    "left"
+                ]
+            },
+            {
+                "from": [
+                    "Run SpineOpt 1",
+                    "right"
+                ],
+                "to": [
+                    "Output",
+                    "left"
+                ]
+            }
+        ],
+        "jumps": []
+    },
+    "items": {
+        "Input": {
+            "type": "Data Store",
+            "description": "",
+            "x": -230.0,
+            "y": -62.0,
+            "url": {
+                "dialect": "sqlite",
+                "username": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/items/input/C1_C_DA_coordinated_sizing.sqlite"
+                }
+            },
+            "cancel_on_error": false
+        },
+        "Run SpineOpt 1": {
+            "type": "Tool",
+            "description": "",
+            "x": -63.0,
+            "y": -22.0,
+            "specification": "Run SpineOpt",
+            "execute_in_work": false,
+            "cmd_line_args": []
+        },
+        "Output": {
+            "type": "Data Store",
+            "description": "",
+            "x": 159.0,
+            "y": -49.0,
+            "url": {
+                "dialect": "sqlite",
+                "username": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/items/output/Output.sqlite"
+                }
+            },
+            "cancel_on_error": false
+        }
+    }
+}
